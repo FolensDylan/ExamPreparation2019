@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HowestHealthFood_FolensDylan.ViewModels
+namespace ExamPreparation.ViewModels
 {
     public class MealsModel
     {
@@ -21,7 +21,7 @@ namespace HowestHealthFood_FolensDylan.ViewModels
             Meals = new List<Meal>();
             foreach (Meals meal in MealsList)
             {
-                Meal n = new Meal
+                Meal n = new Meal()
                 {
                     Id = meal.Id,
                     Title = meal.Title,

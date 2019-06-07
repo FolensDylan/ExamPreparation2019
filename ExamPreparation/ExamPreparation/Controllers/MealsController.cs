@@ -6,9 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ExamPreparation.Entities;
+using ExamPreparation.ViewModels;
 
 
-namespace HowestHealthFood_FolensDylan.Controllers
+namespace ExamPreparation.Controllers
 {
 
     // Er wordt niet gekeken naar Eindresultaat, maar naar gebruik van opgenomen leerstof. Gebruik van Entities, masterLayout, Viewmodels, Views, Afwerking (Effitiëntie) en Extra punten die te verdienen zijn.

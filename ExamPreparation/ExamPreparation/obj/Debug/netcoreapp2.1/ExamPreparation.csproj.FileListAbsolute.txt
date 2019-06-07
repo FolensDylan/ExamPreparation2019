@@ -31,3 +31,6 @@ D:\visualStudio\GitFor.Net\ExamPreparation2019\ExamPreparation\ExamPreparation\b
 D:\visualStudio\GitFor.Net\ExamPreparation2019\ExamPreparation\ExamPreparation\bin\Debug\netcoreapp2.1\ExamPreparation.Views.pdb
 D:\visualStudio\GitFor.Net\ExamPreparation2019\ExamPreparation\ExamPreparation\obj\Debug\netcoreapp2.1\ExamPreparation.Views.pdb
 D:\visualStudio\GitFor.Net\ExamPreparation2019\ExamPreparation\ExamPreparation\obj\Debug\netcoreapp2.1\ExamPreparation.csproj.CopyComplete
+D:\visualStudio\GitFor.Net\ExamPreparation2019\ExamPreparation\ExamPreparation\obj\Debug\netcoreapp2.1\Razor\Views\Meals\body.g.cshtml.cs
+D:\visualStudio\GitFor.Net\ExamPreparation2019\ExamPreparation\ExamPreparation\obj\Debug\netcoreapp2.1\Razor\Views\Meals\header.g.cshtml.cs
+D:\visualStudio\GitFor.Net\ExamPreparation2019\ExamPreparation\ExamPreparation\obj\Debug\netcoreapp2.1\Razor\Views\Meals\footer.g.cshtml.cs

@@ -1,0 +1,501 @@
+/*---------------------*/
+/*      VARIABLES      */
+/*---------------------*/
+$blue: #41BEFF;
+$yellow:  #FFAF2C;
+
+@mixin backgroundForTitle(){
+  background-color: rgba(65,190,255,0.9);
+  text-shadow: 2px 2px 2px rgba(16, 61, 81, 0.5);
+  color: #FFF;
+  padding: 5px;
+}
+
+@mixin popup(){
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 45%;
+  background-color: #FFF;
+  border: 5px solid $blue;
+  padding: 20px;
+}
+
+/*---------------------*/
+/*   GENERAL ELEMENTS  */
+/*---------------------*/
+body {
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  color: #666;
+
+  /* Sticky footer*/
+  display: flex;
+  flex-flow: nowrap column;
+  height: 100vh;
+
+}
+
+h1, h2 {
+  font-family: Pacifico, Georgia, Cambria, serif;
+}
+
+h3, h4 {
+  font-weight: bold;
+}
+a {
+  color: $blue;
+}
+header a {
+  text-decoration: none;
+}
+p {
+  margin-bottom: 10px;
+}
+img {
+  max-width: 100%;
+}
+main {
+  padding-top: 95px
+}
+
+/* --- General classes --- */
+.hidden, header nav li:last-child .viewcart .hidden {
+  display: none;
+}
+
+
+/* --- H1 title --- */
+h1 {
+  line-height: 40px;
+  padding-left: 45px;
+  text-transform: lowercase;
+  background: {
+    image: url(../media/dinner.svg);
+    size: 40px;
+    position: left center;
+    repeat: no-repeat;
+  }
+}
+
+/* --- Navigation --- */
+header {
+  min-height: 70px;
+  background-color: rgba(30, 35, 39, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px 0 20px;
+  margin-bottom: 2%;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+  h1 {
+    color: $blue;
+    font-size: 2rem;
+  }
+  nav {
+    li {
+      display: inline;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-right: 15px;
+
+      a {
+        color: #FFF;
+        display: inline-block;
+        border-bottom: 3px solid transparent;
+        padding-bottom: 4px;
+        &:hover, &.active {
+          color: $blue;
+          border-bottom-color: $blue
+        }
+      }
+
+      &:last-child a {
+        color: #FFF;
+        background-color: $blue;
+        padding: 7px;
+        margin-left: 45px;
+        border-radius: 5px;
+        border: 4px solid $blue;
+
+        &:hover {
+          background-color: #FFF;
+          color: $blue;
+        }
+
+        span {
+          display: inline-block;
+          margin-right: 5px;
+          padding:6px 8px;
+          border-radius: 50%;
+          background-color: $yellow;
+          color: #FFF;
+        }
+
+      }
+    }
+  }
+  h1 {
+
+  }
+}
+
+/* --- Section widths --- */
+section {
+  width: 80%;
+  margin: 0 auto;
+}
+
+section, aside {
+  margin-bottom: 3%;
+}
+
+section h2 {
+  font-size: 3rem;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+
+/* --- Intermezzo --- */
+aside {
+  background-color: $blue;
+  color: #FFF;
+  font-size: 3.4rem;
+  line-height: 210%;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* --- Footer--- */
+footer {
+  background-color: #000;
+  color: #FFF;
+  margin: auto 0 0 0;
+  text-align: center;
+  padding: 20px 0;
+  div {
+    padding-top: 120px;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 2%;
+    margin-right: 10%;
+    line-height: 150%;
+    background: {
+      image: url(../media/envelope.svg);
+      repeat: no-repeat;
+      position: top center;
+      size: 100px
+    }
+
+    a {
+      display: block;
+      font-weight: bold;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    &:last-of-type {
+      background-image: url(../media/placeholder.svg);
+      margin-right: 0;
+    }
+  }
+  &>p {
+    font-size: 0.7rem;
+    color: #EEE;
+  }
+
+}
+
+/*---------------------*/
+/*   Meal of the day   */
+/*---------------------*/
+
+
+#mealoftheday {
+  position: relative;
+  h2 {
+
+    text-shadow: 2px 2px rgba(30, 35, 39, 0.9);
+    color: #FFF;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  img {
+    display: block;
+    min-height: 1136px;
+    background-color: $yellow;
+    color: $yellow /*ok this is dirty I know*/
+  }
+  div {
+    position: absolute;
+    right: 15px;
+    top: 300px;
+    width: 45%;
+    p {
+
+
+      span {
+        display: inline-block;
+        background-color: rgba(65,190,255,0.9);
+        text-shadow: 2px 2px 2px rgba(16, 61, 81, 0.5);
+        color: #FFF;
+        padding: 5px;
+      }
+      strong {
+        color: #FFF;text-shadow: 1px 1px 1px rgba(16, 61, 81, 0.5);
+        display: block;
+        font-weight: bold;
+        margin-top: 5px;
+        background-color: rgba(247,240,17,0.9);padding: 5px;
+      }
+    }
+  }
+}
+
+/*---------------------*/
+/*     COLLECTION      */
+/*---------------------*/
+
+#collection {
+
+  .flexcontainer {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+  }
+  form {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: right;
+    label {
+      font-size: 0.9rem;
+      text-transform: lowercase;
+      margin-right: 5px;
+      font-weight: bold;
+      display: inline-block;
+    }
+    input {display: inline-block}
+    input[type="search"]{
+      margin-right: 5px;
+    }
+  }
+  article {
+    flex: 0 1 22%;
+    position: relative;
+    margin-bottom: 15px;
+    h3 {
+      position: absolute;
+      top: 15px;
+      text-align: right;
+      @include backgroundForTitle();
+    }
+    figcaption {
+      font-size: 0.7rem;
+      margin-bottom: 5px;
+    }
+    /*dl {
+      font-size: 0.9rem;
+      text-transform: lowercase;
+      display: flex;
+      flex-flow: row wrap;
+      margin-bottom: 10px;
+      dt, dd {
+          flex: 0 1 50%;
+        margin-bottom: 5px;
+      }
+      dt {
+        color: #000;
+        font-weight: bold;
+      }
+    }*/
+    .info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    p {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #000;
+    }
+
+  }
+}
+
+section
+.order {
+  background-color: $yellow;
+  color: #FFF;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: lowercase;
+  transition: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+
+section .addedtocart {
+  transition: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+  background-color: $blue;
+}
+
+/*---------------------*/
+/*     Shopping cart   */
+/*---------------------*/
+#cart, #popup {
+  @include popup();
+
+  .close {
+    color: #FFF;
+    font-weight: bold;
+    background-color: $blue;
+    display: inline-block;
+    border-radius: 23px;
+    padding: 5px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(50%) translateY(-50%);
+  }
+}
+#popup {
+  width: 50%;
+}
+#popup article {
+  display: flex;
+  flex-flow: row wrap;
+  h3 {
+    flex: 1 1 100%;
+    margin-bottom: 15px;
+  }
+  figure, .info  {
+    flex: 1 1 auto;
+  }
+  figure {
+    margin-right: 2%;
+    max-width: 35%;
+  }
+  dl {
+    font-size: 0.9rem;
+    text-transform: lowercase;
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 10px;
+    dt, dd {
+      flex: 0 1 50%;
+      margin-bottom: 5px;
+    }
+    dt {
+      color: #000;
+      font-weight: bold;
+    }
+  }
+  p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+  }
+}
+
+#cart {
+
+  h2 {
+    margin-bottom: 30px;
+    span {
+      color: $yellow
+    }
+  }
+  p strong {
+    font-weight: bold;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    th {
+      font-weight: bold;
+    }
+    tbody td:nth-child(even){
+      text-align: right;
+      padding-right: 15px;
+    }
+    tfoot {
+      text-align: right;
+      td:last-child {
+        background-color: $blue;
+        color: #FFF;
+      }
+    }
+    td, th {
+      padding: 10px;
+    }
+    tr:nth-child(even) td {
+      background-color: #EEE;
+    }
+  }
+  .order, input[type="submit"] {
+    margin-left: auto;
+    margin-right: 0;
+    display: block;
+    width: 200px
+  }
+}
+
+
+label, input[type="text"],input[type="number"], textarea {
+  display: block;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],input[type="number"], textarea  {
+  background-color: $blue;
+  padding: 3px;
+  color: #fff;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+  border: 4px solid $blue;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  width: 100%
+}
+input[type="number"] {
+  width: 20%;
+}
+input[type="text"]:focus,input[type="number"]:focus,  textarea:focus {
+  background-color: $yellow;
+  border-color: $yellow
+}
+input[type="radio"],
+input[type="radio"] + label {
+  display: inline-block;
+  font-weight: normal;
+}
+
+input[type="submit"]{
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,70 @@
+﻿@section header{
+    <h1>Howest Health Food</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Collection</a></li>
+            <li><a href="make-a-meal.html">Make a meal</a></li>
+            <li><a href="#" class="viewcart"><span>0</span>view cart</a></li>
+        </ul>
+    </nav>
+}
+
+@section main{
+    <section id="mealoftheday">
+        <h2>
+            Meal of the day
+        </h2>
+        <img src="~/images/@Model.MealOfTheDay.Img" alt="@Model.MealOfTheDay.Title" title="@Model.MealOfTheDay.Title" />
+        <div>
+            <p>
+                <span>
+                    Each day we select a different meal for you to enjoy. This should keep you fresh and motivated to let go
+                    of
+                    those fatty ready meals and enjoy life!
+                </span>
+            </p>
+            <p><span>Today's special pick is</span> <strong>@Model.MealOfTheDay.Title</strong></p>
+        </div>
+    </section>
+    <aside>
+        <p><span>@Model.AmountOfDishes</span> deliverable dishes and counting!</p>
+    </aside>
+    <section id="collection">
+        <h2>Our collection of meals</h2>
+        <p>Browse our large selection of meals and have your delivered to you at a moment of your choosing</p>
+        <p>Everything is hand-made in house, with your best interests in mind. We care about your health.</p>
+        <form action="Index" method="post" id="filters">
+            <label for="search">Search</label><input type="search" name="search" id="search" />
+            <label>
+                Calories
+                <select id="dietlevel" name="dietlevel">
+                    <option value="200">light</option>
+                    <option value="300">medium</option>
+                    <option value="400">high</option>
+                </select>
+            </label>
+            <input type="submit" value="Show" />
+
+        </form>
+        <div class="flexcontainer">
+            @foreach (Meal meal in Model.Meals)
+            {
+                <article>
+                    <h3>@Html.DisplayFor(modelItem => meal.Title)</h3>
+                    <figure>
+                        <img src="~/images/@Html.DisplayFor(modelItem => meal.Img)"
+                             alt="@Html.DisplayFor(modelItem => meal.Title)"
+                             title="@Html.DisplayFor(modelItem => meal.Title)" />
+                        <figcaption>
+                            Meal by: <span>@Html.DisplayFor(modelItem => meal.Cook)</span>
+                        </figcaption>
+                    </figure>
+                    <div class="info">
+                        <p>€ <span>@Html.DisplayFor(modelItem => meal.Price)</span>/pp</p>
+                        <a href="#" class="order">Order</a>
+                    </div>
+                </article>
+            }
+        </div>
+    </section>
+}
