@@ -2,6 +2,7 @@
 @using ExamPreparation.ViewModels;
 @model MealsModel;
 
+
 @section head
 {
     <meta charset="UTF-8">
@@ -17,7 +18,7 @@
     <h1>Howest Health Food</h1>
     <nav>
         <ul>
-            <li><a href="index.html" class="active">Collection</a></li>
+            <li><a href="Meals/Collection" class="active">Collection</a></li>
             <li><a href="make-a-meal.html">Make a meal</a></li>
             <li><a href="#" class="viewcart"><span>0</span>view cart</a></li>
         </ul>
@@ -43,7 +44,7 @@
         </div>
     </section>
     <aside>
-        <p><span>@Model.AmountOfDishes</span> deliverable dishes and counting!</p>
+        <p><span>@Model.MealsList.Count</span> deliverable dishes and counting!</p>
     </aside>
     <section id="collection">
         <h2>Our collection of meals</h2>
@@ -63,7 +64,7 @@
 
         </form>
         <div class="flexcontainer">
-            @foreach (Meal meal in Model.Meals)
+            @foreach (Meal meal in Model.MealsList)
             {
                 <article>
                     <h3>@Html.DisplayFor(modelItem => meal.Title)</h3>
@@ -77,7 +78,7 @@
                     </figure>
                     <div class="info">
                         <p>€ <span>@Html.DisplayFor(modelItem => meal.Price)</span>/pp</p>
-                        <a href="#" class="order">Order</a>
+                        <a href="order" class="order">Order</a>
                     </div>
                 </article>
             }

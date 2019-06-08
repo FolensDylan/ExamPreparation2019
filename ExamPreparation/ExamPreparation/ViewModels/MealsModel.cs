@@ -9,17 +9,14 @@ namespace ExamPreparation.ViewModels
 {
     public class MealsModel
     {
-        Random rnd = new Random();
-        public List<Meals> MealsList { get; set; }
-        public List<Meal> Meals { get; set; }
-        public int AmountOfDishes { get; set; }
+        private static int i = 0;
+        public List<Meal> MealsList { get; set; }
 
         public Meal MealOfTheDay { get; set; }
         public MealsModel(List<Meals> meals)
         {
-            this.MealsList = meals;
-            Meals = new List<Meal>();
-            foreach (Meals meal in MealsList)
+            MealsList = new List<Meal>();
+            foreach (Meals meal in meals)
             {
                 Meal n = new Meal()
                 {
@@ -30,18 +27,14 @@ namespace ExamPreparation.ViewModels
                     Calories = meal.Calories,
                     Price = meal.Price
                 };
-                if (n.Id == rnd.Next(1, MealsList.Count + 1))
-                {
-                    MealOfTheDay = n;
-                }
-                Meals.Add(n);
-                AmountOfDishes += 1;
+                MealsList.Add(n);
             }
-        }
-
-        public MealsModel(List<Meal> meals)
-        {
-            Meals = meals;
+            if (i >= meals.Count)
+            {
+                i = 0;
+            }
+            MealOfTheDay = MealsList.ElementAt(i);
+            i += 1; 
         }
 
     }

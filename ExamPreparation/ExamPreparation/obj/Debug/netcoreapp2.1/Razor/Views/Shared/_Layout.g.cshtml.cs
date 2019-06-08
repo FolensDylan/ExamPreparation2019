@@ -63,7 +63,7 @@ Write(RenderSection("head", required: true));
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(69, 250, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8d4bb9e19f344a83850721518c45833e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "addb1fa27ea84dd4869f2e2aee9e2319", async() => {
                 BeginContext(75, 24, true);
                 WriteLiteral("\r\n    <header>\r\n        ");
                 EndContext();

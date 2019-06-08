@@ -81,7 +81,7 @@ using ExamPreparation.Models;
                 WriteLiteral("\r\n    <section id=\"mealoftheday\">\r\n        <h2>\r\n            Meal of the day\r\n        </h2>\r\n        ");
                 EndContext();
                 BeginContext(440, 112, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "8e794c66b6cf4693adf36aa1c5eff669", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "b87641fdc8a8492bad528879aadc4a36", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -155,12 +155,12 @@ AddHtmlAttributeValue("", 523, Model.MealOfTheDay.Title, 523, 25, false);
         ");
                 EndContext();
                 BeginContext(1411, 536, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "de8fdae07a90400484aaaa4f0891c27a", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "61e9ef9bf1f94b24b1ddfb95c3315473", async() => {
                     BeginContext(1459, 224, true);
                     WriteLiteral("\r\n            <label for=\"search\">Search</label><input type=\"search\" name=\"search\" id=\"search\" />\r\n            <label>\r\n                Calories\r\n                <select id=\"dietlevel\" name=\"dietlevel\">\r\n                    ");
                     EndContext();
                     BeginContext(1683, 34, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "188c1ad24f2442a181f6ab381d93ffa4", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6597a4a2916045c09aefd1fc0f6fbbd9", async() => {
                         BeginContext(1703, 5, true);
                         WriteLiteral("light");
                         EndContext();
@@ -182,7 +182,7 @@ AddHtmlAttributeValue("", 523, Model.MealOfTheDay.Title, 523, 25, false);
                     WriteLiteral("\r\n                    ");
                     EndContext();
                     BeginContext(1739, 35, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b346ca90021d4d5a8ef0ecc726e573ba", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4a594f41c45546338a8a4b07bf2fb8a9", async() => {
                         BeginContext(1759, 6, true);
                         WriteLiteral("medium");
                         EndContext();
@@ -204,7 +204,7 @@ AddHtmlAttributeValue("", 523, Model.MealOfTheDay.Title, 523, 25, false);
                     WriteLiteral("\r\n                    ");
                     EndContext();
                     BeginContext(1796, 33, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "95a100b57dc8436989bde81a12c1f949", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "667f47fac3584995a723a3ec5bce6ffe", async() => {
                         BeginContext(1816, 4, true);
                         WriteLiteral("high");
                         EndContext();
@@ -266,7 +266,7 @@ AddHtmlAttributeValue("", 523, Model.MealOfTheDay.Title, 523, 25, false);
                 WriteLiteral("</h3>\r\n                    <figure>\r\n                        ");
                 EndContext();
                 BeginContext(2203, 220, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "c4fb57a70fec42159e666c5df2df4b0f", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "70d8dd82836d48b6851c98b577719c5c", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

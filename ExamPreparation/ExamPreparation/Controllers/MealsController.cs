@@ -28,32 +28,41 @@ namespace ExamPreparation.Controllers
     {
         MealsContext db;
 
-
         public MealsController()
         {
             db = new MealsContext();
         }
 
-        // GET: Meals
         [Route("/")]
-        [Route("/meals/Collection")]
-        [Route("/Meals")]
+        [Route("Meals")]
+        [Route("Meals/Collection")]
         [Route("/HowestHealthyMealsCollection")]
         public IActionResult Index()
         {
 
             MealsModel listOfMeals = new MealsModel(db.Meals
-                .OrderBy(c => c.Title).ToList());
+                .ToList());
+
+            ViewBag.meals = listOfMeals;
 
             return View(listOfMeals);
         }
 
+        [Route("/Meals/Collection/{word}/{calories}")]
         public IActionResult Index(string word, int calories)
         {
-            MealsModel listOfMeals = new MealsModel(db.Meals.Where(c => c.Title.Contains(word))
+            MealsModel listOfMeals = new MealsModel(db.Meals.Where(c => c.Title.Contains(word) & c.Calories <= calories)
                  .OrderBy(c => c.Title).ToList());
 
             return View(listOfMeals);
+
+        }
+
+        [Route("/order")]
+        public IActionResult Index(String nameOfMeal)
+        {
+
+            return View();
 
         }
     }
